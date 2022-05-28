@@ -1,6 +1,6 @@
-.header-container {
+.nav-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .logo{
