@@ -1,0 +1,9 @@
+.container-count {
+    display: flex;
+    align-items: center;
+}
+
+.count-number {
+    margin-left: 10px;
+    margin-right: 10px;
+}
