@@ -6,4 +6,11 @@
 .count-number {
     margin-left: 10px;
     margin-right: 10px;
+    font-size: smaller;
+}
+
+
+
+.btn-add-cart {
+    display: flex;
 }
