@@ -1,8 +1,27 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import ItemList from '../ItemList/ItemList'
+import {getData} from "../services/getData"
 
-const ItemListContainer = (props) => {
+const ItemListContainer = () => {
+
+  const [items, setItems] = useState([])
+
+
+  useEffect (() => {
+    getData() 
+      .then((resp) => {
+        setItems(resp)
+      })
+      .catch((error) => {
+        console.log("Error", error)
+      })
+  })
+
+
   return (
-    <div>{props.titulo}</div>
+    <div className='container my-5'>
+      <ItemList items={items}/>
+    </div>
   )
 }
 
