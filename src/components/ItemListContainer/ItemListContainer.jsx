@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import ItemList from '../ItemList/ItemList'
 import {getData} from "../services/getData"
+import './ItemListContainer.css';
 
 const ItemListContainer = () => {
 
@@ -19,7 +20,7 @@ const ItemListContainer = () => {
 
 
   return (
-    <div className='container my-5'>
+    <div className='container-item-list-co'>
       <ItemList items={items}/>
     </div>
   )

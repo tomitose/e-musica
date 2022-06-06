@@ -1,0 +1,14 @@
+.container-item{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: min-content;
+    align-items: center;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.item-name{
+    height: 150px;
+    text-align: center;
+}
