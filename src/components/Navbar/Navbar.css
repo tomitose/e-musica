@@ -1,6 +1,24 @@
+.nav-container-up{
+    height: 40px;
+    display: block;
+    background-color: rgb(106, 150, 156);
+    display: flex;
+    align-items: center;
+    padding-left: 100px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.logos-nav-up img{
+    height: 30px;
+    width: auto;
+    padding-left: 15px;
+}
+
 .nav-container {
     display: flex;
     justify-content: space-around;
+    background-color: #84A8A1;
 }
 
 .logo{

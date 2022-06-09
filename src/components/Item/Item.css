@@ -12,3 +12,15 @@
     height: 150px;
     text-align: center;
 }
+.btn-view-product{
+    background-color: #e7c11e;
+    width: 183px;
+    font-weight: 700;
+    cursor: pointer;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 11px 0 10px 0;
+    width: 100%;
+    font-size: .875em;
+}

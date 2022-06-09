@@ -9,7 +9,7 @@ const Item = ({item}) => {
         <img src={item.img} alt="img"/>
         <h2 className='item-name'>{item.name}</h2>
         <p>Price: ${item.price}</p>
-        <Button variant="outline-success">View Product</Button>
+        <Button className='btn-view-product' variant="outline-success">View Product</Button>
         <br/>
     </div>
   )

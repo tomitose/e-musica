@@ -5,6 +5,14 @@ import "./Navbar.css";
 const Navbar = () => {
   return (
     <div>
+      <nav className='nav-container-up'>
+        <div className='logos-nav-up'>
+          <img src="./img/Logos/Gibson_Guitar_logo.svg.png" alt="gibson" />
+          <img src="./img/Logos/kramer-logo-color-black-bg-transparent.png" alt="kramer" />
+          <img src="./img/Logos/krk_temp_footer_logo.png" alt="krk" />
+          <img src="./img/Logos/Maestro_primary_black_v1.png" alt="maestro" />
+        </div>
+      </nav>
         <nav className='nav-container'>
             <h1 className='logo'>Proyecto</h1>
             <ul className='nav-items'>
