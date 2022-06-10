@@ -1,18 +1,21 @@
-import './App.css';
+import "./App.css";
 //import ItemCount from './components/ItemCount/ItemCount';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-import Navbar from './components/Navbar/Navbar';
-
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import Navbar from "./components/Navbar/Navbar";
+import AboutUs from "./components/AboutUs/AboutUs";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <Navbar/>
-      <header className="App-header">
-       <ItemListContainer titulo="Bienvenidos a la App"/>
-       {/* <ItemCount initial={1}/> */}
-      </header>
-    </div>
+    <BrowserRouter>
+        <Navbar />
+        
+        <Routes>
+          <Route path="/" element={<ItemListContainer />}></Route>
+          <Route path="/aboutus" element={ <AboutUs/> }></Route>
+        </Routes>
+          {/* <ItemCount initial={1}/> */}
+    </BrowserRouter>
   );
 }
 
