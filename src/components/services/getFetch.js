@@ -361,62 +361,62 @@ const products = [
 
     // Merch
 
-    {
-        id: 41,
-        category: "merch",
-        img: "./img/Merch/Epiphone_case.png",
-        name:"Epiphone Case",
-        price: 119,
-        stock: 80
-    },
-    {
-        id: 42,
-        category: "merch",
-        img: "./img/Merch/Epiphone_hardcase.png",
-        name:"Epiphone Hardcase Box",
-        price: 149,
-        stock: 42
-    },
-    {
-        id: 43,
-        category: "merch",
-        img: "./img/Merch/Epiphone_pick.jpg",
-        name:"Epiphone Pick",
-        price: 4,
-        stock: 200
-    },
-    {
-        id: 44,
-        category: "merch",
-        img: "./img/Merch/Gibson_logopatch.png",
-        name:"Gibson Logo Patch",
-        price: 10,
-        stock: 42
-    },  
-    {
-        id: 45,
-        category: "merch",
-        img: "./img/Merch/Gibson_pin.png",
-        name:"Gibson Pin",
-        price: 8,
-        stock: 42
-    },
-    {
-        id: 46,
-        category: "merch",
-        img: "./img/Merch/Guitar_pick.png",
-        name:"Gibson Pick",
-        price: 8,
-        stock: 500
-    },
-    {
-        id: 47,
-        category: "merch",
-        img: "./img/Merch/Guitar_strap.png",
-        name:"Guitar Strap",
-        price: 19,
-        stock: 120
-    }
+    // {
+    //     id: 41,
+    //     category: "merch",
+    //     img: "./img/Merch/Epiphone_case.png",
+    //     name:"Epiphone Case",
+    //     price: 119,
+    //     stock: 80
+    // },
+    // {
+    //     id: 42,
+    //     category: "merch",
+    //     img: "./img/Merch/Epiphone_hardcase.png",
+    //     name:"Epiphone Hardcase Box",
+    //     price: 149,
+    //     stock: 42
+    // },
+    // {
+    //     id: 43,
+    //     category: "merch",
+    //     img: "./img/Merch/Epiphone_pick.jpg",
+    //     name:"Epiphone Pick",
+    //     price: 4,
+    //     stock: 200
+    // },
+    // {
+    //     id: 44,
+    //     category: "merch",
+    //     img: "./img/Merch/Gibson_logopatch.png",
+    //     name:"Gibson Logo Patch",
+    //     price: 10,
+    //     stock: 42
+    // },  
+    // {
+    //     id: 45,
+    //     category: "merch",
+    //     img: "./img/Merch/Gibson_pin.png",
+    //     name:"Gibson Pin",
+    //     price: 8,
+    //     stock: 42
+    // },
+    // {
+    //     id: 46,
+    //     category: "merch",
+    //     img: "./img/Merch/Guitar_pick.png",
+    //     name:"Gibson Pick",
+    //     price: 8,
+    //     stock: 500
+    // },
+    // {
+    //     id: 47,
+    //     category: "merch",
+    //     img: "./img/Merch/Guitar_strap.png",
+    //     name:"Guitar Strap",
+    //     price: 19,
+    //     stock: 120
+    // }
 ]
 
 export default products;

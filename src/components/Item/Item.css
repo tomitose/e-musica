@@ -12,9 +12,14 @@
     height: 150px;
     text-align: center;
 }
+
+.link-btn{
+    text-decoration: none;
+    width: 183px;
+}
+
 .btn-view-product{
     background-color: #e7c11e;
-    width: 183px;
     font-weight: 700;
     cursor: pointer;
     color: #fff;
