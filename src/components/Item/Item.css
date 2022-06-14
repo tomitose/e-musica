@@ -9,8 +9,13 @@
 }
 
 .item-name{
-    height: 150px;
+    height: 100px;
     text-align: center;
+    font-size: x-large;
+}
+
+.price-nmb{
+    font-size: medium;
 }
 
 .link-btn{
@@ -27,5 +32,5 @@
     display: block;
     padding: 11px 0 10px 0;
     width: 100%;
-    font-size: .875em;
+    font-size: 20px;
 }

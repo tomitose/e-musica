@@ -1,6 +1,8 @@
 .container-count {
     display: flex;
     align-items: center;
+    justify-content: center;
+    justify-content: space-between;
 }
 
 .count-number {
@@ -9,8 +11,22 @@
     font-size: smaller;
 }
 
-
+.btn-inad{
+    background-color: #6a969c;
+    color: white;
+    padding: 6px;
+}
 
 .btn-add-cart {
     display: flex;
+    background-color: #e7c11e;
+    font-weight: 700;
+    cursor: pointer;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    width: 100%;
+    font-size: 20px;
 }
+

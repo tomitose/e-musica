@@ -19,9 +19,9 @@ const ItemCount = () => {
   return (
     <div>
       <div className="container-count">
-        <Button onClick={() => increase()}> + </Button>
+      <Button className="btn-inad" onClick={() => decrement()}> - </Button>
         <h3 className="count-number">{count}</h3>
-        <Button onClick={() => decrement()}> - </Button>
+      <Button className="btn-inad" onClick={() => increase()}> + </Button>        
       </div>
       <div>
         <Button className="btn-add-cart">Add to Cart</Button>
