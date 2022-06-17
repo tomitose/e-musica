@@ -4,7 +4,7 @@ const products = [
 
         id: 1,
         category:"epiphone",
-        img: "./img/Guitars-epiphone/EpiphoneWornvintage.png",
+        img: "/img/Guitars-epiphone/EpiphoneWornvintage.png",
         name:"Epiphone Worn Heritage Cherry",
         price: 500,
         stock: 40,
@@ -13,7 +13,7 @@ const products = [
     {
         id: 2,
         category:"epiphone",
-        img: "./img/Guitars-epiphone/EpiphoneWornvintage_gold.png",
+        img: "/img/Guitars-epiphone/EpiphoneWornvintage_gold.png",
         name:"Epiphone Worm Heritage Gold",
         price: 500,
         stock: 30,
@@ -23,7 +23,7 @@ const products = [
     {
         id: 3,
         category:"epiphone",
-        img: "./img/Guitars-epiphone/EpiphoneWornvintage_purple.png",
+        img: "/img/Guitars-epiphone/EpiphoneWornvintage_purple.png",
         name:"Epiphone Worm Heritage Purple",
         price: 500,
         stock: 40,
@@ -33,7 +33,7 @@ const products = [
     {
         id: 4,
         category:"epiphone",
-        img: "./img/Guitars-epiphone/EpiphoneAlpine_black.png",
+        img: "/img/Guitars-epiphone/EpiphoneAlpine_black.png",
         name:"Epiphone SG Alpine Black",
         price: 499,
         stock: 40,
@@ -43,7 +43,7 @@ const products = [
     {
         id: 5,
        category:"epiphone",
-       img: "./img/Guitars-epiphone/EpiphoneAlpine_cherry.png",
+       img: "/img/Guitars-epiphone/EpiphoneAlpine_cherry.png",
        name:"Epiphone SG Alpine Cherry",
         price: 499,
         stock: 10,
@@ -53,7 +53,7 @@ const products = [
     {
         id: 6,
         category:"epiphone",
-        img: "./img/Guitars-epiphone/EpiphoneAlpine_white.png",
+        img: "/img/Guitars-epiphone/EpiphoneAlpine_white.png",
         name:"Epiphone SG Alpine White",
         price: 499,
         stock: 20,
@@ -63,7 +63,7 @@ const products = [
     {
         id: 7,
         category:"epiphone",
-        img: "./img/Guitars-epiphone/EpiphoneSGCherry.png",
+        img: "/img/Guitars-epiphone/EpiphoneSGCherry.png",
         name:"Epiphone SG Maestro Cherry Top",
         price: 600,
         stock: 20,
@@ -73,7 +73,7 @@ const products = [
     {
         id: 8,
        category:"epiphone",
-       img: "./img/Guitars-epiphone/EpiphoneCasinoWorn_blue.png",
+       img: "/img/Guitars-epiphone/EpiphoneCasinoWorn_blue.png",
        name:"Epiphone Casino Worn Blue",
         price: 520,
         stock: 20,
@@ -83,7 +83,7 @@ const products = [
     {
         id: 9,
         category:"epiphone",
-        img: "./img/Guitars-epiphone/EpiphoneCasinoWorn_ebony.png",
+        img: "/img/Guitars-epiphone/EpiphoneCasinoWorn_ebony.png",
         name:"Epiphone Casino Worn Ebony",
         price: 520,
         stock: 20,
@@ -93,7 +93,7 @@ const products = [
     {
         id: 10,
         category:"epiphone",
-        img: "./img/Guitars-epiphone/EpiphoneCasinoWorn_olive.png",
+        img: "/img/Guitars-epiphone/EpiphoneCasinoWorn_olive.png",
         name:"Epiphone Casino Worn Olive",
         price: 520,
         stock: 20,
@@ -103,7 +103,7 @@ const products = [
     {
         id: 11,
         category:"epiphone",
-        img: "./img/Guitars-epiphone/EpiphoneEbony.png",
+        img: "/img/Guitars-epiphone/EpiphoneEbony.png",
         name:"Epiphone SG Custom Ebony",
         price: 629,
         stock: 20,
@@ -113,7 +113,7 @@ const products = [
     {
         id: 12,
         category:"epiphone",
-        img: "./img/Guitars-epiphone/EpiphoneEmperor_green.png",
+        img: "/img/Guitars-epiphone/EpiphoneEmperor_green.png",
         name:"Epiphone Emperor Swing",
         price: 799,
         stock: 30,

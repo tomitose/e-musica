@@ -1,30 +1,30 @@
-import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import "./ItemCount.css";
 
-const ItemCount = () => {
-  const [count, setCount] = useState(1);
+const ItemCount = ({stock,addToCart,setCounter,counter}) => {
 
   function decrement() {
-    setCount(count - 1);
-    if (count <= 1) {
-      setCount(1);
+   setCounter(counter - 1);
+    if (counter <= 1) {
+      setCounter(1);
     }
   }
 
   function increase() {
-    setCount(count + 1);
+    counter < stock && setCounter(counter + 1);
   }
+
+  
 
   return (
     <div>
       <div className="container-count">
       <Button className="btn-inad" onClick={() => decrement()}> - </Button>
-        <h3 className="count-number">{count}</h3>
+        <h3 className="count-number">{counter}</h3>
       <Button className="btn-inad" onClick={() => increase()}> + </Button>        
       </div>
       <div>
-        <Button className="btn-add-cart">Add to Cart</Button>
+        <Button onClick={addToCart} className="btn-add-cart">Add to Cart</Button>
       </div>
     </div>
   );
