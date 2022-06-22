@@ -5,6 +5,9 @@ import './ItemDetail.css';
 
 const ItemDetail = ({item}) => {
 
+
+  
+
   const [count,setCount] = useState(1)
   
   const addToCart = () => {
