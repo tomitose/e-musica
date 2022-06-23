@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import ItemCount from '../ItemCount/ItemCount';
 import './ItemDetail.css';
 
@@ -30,6 +31,7 @@ const ItemDetail = ({item}) => {
       setCounter={setCount}
       counter={count}
       />
+      <Link to="/cart">Go to Cart</Link>
     </div>
   )
 }
