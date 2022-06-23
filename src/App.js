@@ -6,7 +6,7 @@ import Merchandise from "./components/Merchandise/Merchandise";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
-import { MyContext } from "./components/Context/MyContext";
+import CartContextProvider from "./components/Context/CartContext";
 import Cart from "./components/Cart/Cart";
 
 function App() {
@@ -16,8 +16,7 @@ function App() {
   return (
 
 
-    <MyContext.Provider>
-
+    <CartContextProvider>
         <BrowserRouter>
             <Navbar />
             
@@ -32,8 +31,8 @@ function App() {
 
             <Footer/>  
         </BrowserRouter>
+    </CartContextProvider>
 
-    </MyContext.Provider>
 
   );
 }
