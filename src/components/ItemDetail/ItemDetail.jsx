@@ -1,39 +1,52 @@
-import React from 'react';
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import ItemCount from '../ItemCount/ItemCount';
-import './ItemDetail.css';
+import React from "react";
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useCartContext } from "../Context/CartContext";
+import ItemCount from "../ItemCount/ItemCount";
+import "./ItemDetail.css";
 
-const ItemDetail = ({item}) => {
+const ItemDetail = ({ item }) => {
+  const { addItem, isInCart } = useCartContext();
 
 
-  
+  const [count, setCount] = useState(1);
+  const navigate = useNavigate();
 
-  const [count,setCount] = useState(1)
-  
+  const goBack = () => {
+    navigate(-1);
+  };
+
   const addToCart = () => {
     const itemToCart = {
       ...item,
-      count: count
-      
-    }
-    console.log (itemToCart)
-  }
+      counter: count
+    };
+    addItem(itemToCart)
+  };
+
   return (
-    <div className='container-item-detail'>
+    <div className="container-item-detail">
       <h1>{item.name}</h1>
       <img src={item.img} alt={item.name} />
-      <p className='text-desc'>{item.desc}</p>
-      <h3 className='price-detail'>Price: ${item.price}</h3>
-      <ItemCount 
-      stock={item.stock}
-      addToCart={addToCart}
-      setCounter={setCount}
-      counter={count}
-      />
-      <Link to="/cart">Go to Cart</Link>
-    </div>
-  )
-}
+      <p className="text-desc">{item.desc}</p>
+      <h3 className="price-detail">Price: ${item.price}</h3>
 
-export default ItemDetail
+      {isInCart(item.id) ? (
+        <Link to="/cart">Go to Cart</Link>
+      ) : (
+        <ItemCount
+          stock={item.stock}
+          addToCart={addToCart}
+          setCounter={setCount}
+          counter={count}
+        />
+      )}
+
+      <button onClick={goBack} className="btn-back">
+        Back Home
+      </button>
+    </div>
+  );
+};
+
+export default ItemDetail;

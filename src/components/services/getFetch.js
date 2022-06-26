@@ -121,88 +121,88 @@ const products = [
 
     },
 
-    //// Gibson Models
+    // Gibson Models
 
-    // {
-    //     id: 13,
-    //     category: gibson,
-    //     img: "../../assets/img/Guitars-gibson/Gibson_bbkingEbony",
-    //     name:"Gibson BB King Ebony",
-    //     price: 6999,
-    //     stock: 30
-    // },
+    {
+        id: 13,
+        category: "gibson",
+        img: "/img/Guitars-gibson/Gibson_bbkingEbony.png",
+        name:"Gibson BB King Ebony",
+        price: 6999,
+        stock: 30
+    },
     // {
     //     id: 14,
-    //     category: gibson,
-    //     img: "../../assets/img/Guitars-gibson/Gibson_bbkingEbony-1",
+    //     category: "gibson",
+    //     img: "/img/Guitars-gibson/Gibson_bbkingEbony-1.png",
     //     name:"Gibson BB King Ebony",
     //     price: 6999,
     //     stock: 30
     // },
-    // {
-    //     id: 15,
-    //     category: gibson,
-    //     img: "../../assets/img/Guitars-gibson/Gibson_explorer",
-    //     name:"Gibson Explorer ",
-    //     price: 1999,
-    //     stock: 30
-    // },
+    {
+        id: 15,
+        category: "gibson",
+        img: "/img/Guitars-gibson/Gibson_explorer.png",
+        name:"Gibson Explorer ",
+        price: 1999,
+        stock: 30
+    },
     // {
     //     id: 16,
-    //     category: gibson,
-    //     img: "../../assets/img/Guitars-gibson/Gibson_explorer-1",
+    //     category: "gibson",
+    //     img: "/img/Guitars-gibson/Gibson_explorer-1.png",
     //     name:"Gibson Explorer ",
     //     price: 1999,
     //     stock: 30
     // },
-    // {
-    //     id: 17,
-    //     category: gibson,
-    //     img: "../../assets/img/Guitars-gibson/Gibson_flyingv_korina",
-    //     name:"Gibson Flying V Korina",
-    //     price: 9999,
-    //     stock: 10
-    // },
+    {
+        id: 17,
+        category: "gibson",
+        img: "/img/Guitars-gibson/Gibson_flyingv_korina.png",
+        name:"Gibson Flying V Korina",
+        price: 9999,
+        stock: 10
+    },
     // {
     //     id: 18,
-    //     category: gibson,
-    //     img: "../../assets/img/Guitars-gibson/Gibson_flyingv_korina-1",
+    //     category: "gibson",
+    //     img: "/img/Guitars-gibson/Gibson_flyingv_korina-1.png",
     //     name:"Gibson Flying V Korina",
     //     price: 9999,
     //     stock: 10
     // },
-    // {
-    //     id: 19,
-    //     category: gibson,
-    //     img: "../../assets/img/Guitars-gibson/Gibson_lespaul70Delux",
-    //     name:"Gibson Les Paul 70 Delux",
-    //     price: 2999,
-    //     stock: 50
-    // },
+    {
+        id: 19,
+        category: "gibson",
+        img: "/img/Guitars-gibson/Gibson_lespaul70Delux.png",
+        name:"Gibson Les Paul 70 Delux",
+        price: 2999,
+        stock: 50
+    },
     // {
     //     id: 20,
-    //     category: gibson,
-    //     img: "../../assets/img/Guitars-gibson/Gibson_lespaul70Delux-1",
+    //     category: "gibson",
+    //     img: "/img/Guitars-gibson/Gibson_lespaul70Delux-1.png",
     //     name:"Gibson Les Paul 70 Delux",
     //     price: 2999,
     //     stock: 50
     // },
-    // {
-    //     id: 21,
-    //     category: gibson,
-    //     img: "../../assets/img/Guitars-gibson/Gibson_lespaulGold",
-    //     name:"Gibson Les Paul 50 Gold Top",
-    //     price: 2999,
-    //     stock: 30
-    // },
+    {
+        id: 21,
+        category: "gibson",
+        img: "/img/Guitars-gibson/Gibson_lespaulGold.png",
+        name:"Gibson Les Paul 50 Gold Top",
+        price: 2999,
+        stock: 30
+    },
     // {
     //     id: 22,
-    //     category: gibson,
-    //     img: "../../assets/img/Guitars-gibson/Gibson_lespaulGold-1",
+    //     category: "gibson",
+    //     img: "/img/Guitars-gibson/Gibson_lespaulGold-1.png",
     //     name:"Gibson Les Paul 50 Gold Top",
     //     price: 2999,
     //     stock: 30
-    // },
+    // }
     // {
     //     id: 23,
     //     category: gibson,

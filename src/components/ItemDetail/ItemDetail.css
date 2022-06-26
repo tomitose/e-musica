@@ -12,3 +12,14 @@
     text-align: center;
     font-size: large;
 }
+
+.btn-back{
+    background-color: #e7c11e;
+    font-weight: 700;
+    cursor: pointer;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    margin: 20px;
+    font-size: 20px;
+}
