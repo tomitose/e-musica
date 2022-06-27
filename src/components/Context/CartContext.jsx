@@ -21,13 +21,22 @@ const CartContextProvider = ({ children }) => {
     return cart.reduce ((acc,prod) => acc += (prod.price * prod.count), 0)
   }
 
+  const deleteItem = () => {
+    setCart(cart)
+  }
+
+  const emptyCart = () => {
+    setCart ([])
+  }
   return (
   <CartContext.Provider 
   value={{
     cart,
     addItem,
     isInCart,
-    totalPrice
+    totalPrice,
+    deleteItem,
+    emptyCart
   }}>
   {children}
   </CartContext.Provider>)

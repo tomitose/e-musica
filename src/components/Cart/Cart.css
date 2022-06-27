@@ -22,22 +22,46 @@
     border: 1px solid #6a969c;
     border-radius: 7px;
     padding: 5px;
-    height: 520px;
+    height: 580px;
 }
 
-.text-cart-total{
-    text-align: end;
-    margin-right: 40px;
-}
+
 
 .btn-delete-item{
     background-color: #eb5a5a;
     border-radius: 7px;
     cursor: pointer;
+    margin: 15px;
 }
 
 .icon-delete{
     width: 24px;
     height: auto;
     display: flex;
+}
+
+.container-total-button{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 70px;
+    align-items: center;
+    align-content: space-around;
+}
+
+
+
+.btn-empty-cart{
+    text-align: end;
+    background-color: #ff0000;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    border: black 1px solid;
+    padding: 7px;
+    font-size: initial;
+    font-weight: 700;
 }
