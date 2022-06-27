@@ -21,8 +21,9 @@ const CartContextProvider = ({ children }) => {
     return cart.reduce ((acc,prod) => acc += (prod.price * prod.count), 0)
   }
 
-  const deleteItem = () => {
-    setCart(cart)
+  const deleteItem = (id) => {
+    let newCart = cart.filter((e) => e.id !== id);
+    setCart(newCart);
   }
 
   const emptyCart = () => {
