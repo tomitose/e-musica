@@ -14,8 +14,6 @@ const ItemCount = ({stock,addToCart,setCounter,counter}) => {
     counter < stock && setCounter(counter + 1);
   }
 
-  
-
   return (
     <div>
       <div className="container-count">

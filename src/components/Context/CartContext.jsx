@@ -10,11 +10,11 @@ const CartContextProvider = ({ children }) => {
   const [cart,setCart] = useState([])
 
   const addItem = (item) => {
-    setCart ([...cart, item])
+    setCart([...cart, item])
   }
 
   const isInCart = (id) => {
-    return cart.some((prod) => prod.id === id)
+    return cart.some((product) => product.id === id)
   }
 
   const totalPrice = () => {

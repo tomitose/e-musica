@@ -6,10 +6,12 @@ import ItemCount from "../ItemCount/ItemCount";
 import "./ItemDetail.css";
 
 const ItemDetail = ({ item }) => {
-  const { addItem, isInCart } = useCartContext();
+  const { addItem,isInCart } = useCartContext();
+  console.log(isInCart(item.id))
 
 
   const [count, setCount] = useState(1);
+
   const navigate = useNavigate();
 
   const goBack = () => {
@@ -19,9 +21,12 @@ const ItemDetail = ({ item }) => {
   const addToCart = () => {
     const itemToCart = {
       ...item,
-      counter: count
+     count
     };
+
     addItem(itemToCart)
+    console.log(itemToCart)
+
   };
 
   return (
@@ -31,16 +36,18 @@ const ItemDetail = ({ item }) => {
       <p className="text-desc">{item.desc}</p>
       <h3 className="price-detail">Price: ${item.price}</h3>
 
-      {isInCart(item.id) ? (
+      {
+      isInCart(item.id) 
+      ? 
         <Link to="/cart">Go to Cart</Link>
-      ) : (
+      : 
         <ItemCount
           stock={item.stock}
           addToCart={addToCart}
           setCounter={setCount}
           counter={count}
         />
-      )}
+      }
 
       <button onClick={goBack} className="btn-back">
         Back Home
