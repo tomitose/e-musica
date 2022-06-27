@@ -3,8 +3,35 @@
     align-items: center;
 }
 
+.link-cart{
+    display: flex;
+    text-decoration: none;
+    flex-wrap: wrap;
+    align-items: center;
+}
 .cart-logo {
     width: 30px;
     height: auto;
     color: rgb(0, 0, 0);
+}
+
+
+.cart-length{
+    background: #e7c11e;
+    border-radius: 0.8em;
+   -moz-border-radius: 0.8em;
+   -webkit-border-radius: 0.8em;
+   color: #000000;
+   display: inline-block;
+   font-weight: bold;
+   line-height: 1.2em;
+   margin-right: 15px;
+   text-align: center;
+   width: 1.2em;
+   text-decoration: none; 
+   margin-top: 1px;
+}
+
+.cart-cond{
+    display: flex;
 }

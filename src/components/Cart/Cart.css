@@ -1,0 +1,26 @@
+
+.container-cart-ext{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.text-title{
+    text-align: center;
+}
+
+.img-cart{
+    height: 360px;
+}
+
+.container-cart-item{
+    text-align: center;
+    margin: 0 40px 0 40px;
+}
+
+.text-cart-total{
+    text-align: end;
+    margin-right: 40px;
+}

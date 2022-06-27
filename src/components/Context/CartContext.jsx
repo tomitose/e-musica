@@ -24,6 +24,7 @@ const CartContextProvider = ({ children }) => {
   return (
   <CartContext.Provider 
   value={{
+    cart,
     addItem,
     isInCart,
     totalPrice

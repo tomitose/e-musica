@@ -39,7 +39,7 @@ const ItemDetail = ({ item }) => {
       {
       isInCart(item.id) 
       ? 
-        <Link to="/cart">Go to Cart</Link>
+        <Link to="/cart" className="btn-go-to-cart">Go to Cart</Link>
       : 
         <ItemCount
           stock={item.stock}

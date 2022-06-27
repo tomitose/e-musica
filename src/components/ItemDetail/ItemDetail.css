@@ -11,6 +11,7 @@
 .text-desc {
     text-align: center;
     font-size: large;
+    padding: 20px 100px 0px 100px;
 }
 
 .btn-back{
@@ -22,4 +23,19 @@
     display: block;
     margin: 20px;
     font-size: 20px;
+    border: black 1px solid;
+
+}
+
+.btn-go-to-cart{
+    background-color: #e7c11e;
+    font-weight: 700;
+    cursor: pointer;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 0 5px 0 5px;
+    font-size: 20px;
+    border: black 1px solid;
+
 }
