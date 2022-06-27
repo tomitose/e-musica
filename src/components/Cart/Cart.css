@@ -17,10 +17,27 @@
 
 .container-cart-item{
     text-align: center;
-    margin: 0 40px 0 40px;
+    margin: 6px 38px 0 40px;
+    width: 270px;
+    border: 1px solid #6a969c;
+    border-radius: 7px;
+    padding: 5px;
+    height: 520px;
 }
 
 .text-cart-total{
     text-align: end;
     margin-right: 40px;
+}
+
+.btn-delete-item{
+    background-color: #eb5a5a;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.icon-delete{
+    width: 24px;
+    height: auto;
+    display: flex;
 }

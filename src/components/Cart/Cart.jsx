@@ -1,5 +1,6 @@
 import React from 'react'
 import { useCartContext } from '../Context/CartContext';
+import {AiOutlineDelete} from 'react-icons/ai'
 import "./Cart.css";
 
 const Cart = () => {
@@ -11,6 +12,7 @@ const Cart = () => {
 
     <div className='container-cart-first'>
           <h2 className='text-title'>Order</h2>
+          <hr />
       <div className='container-cart-ext'>
 
           {
@@ -19,9 +21,12 @@ const Cart = () => {
 
                 <h4>{item.name}</h4>
                 <img className='img-cart' src={item.img} alt={item.name} />
-                <p>Count: {item.count}</p>
                 <h6>Product Price: ${item.price * item.count}</h6>
+                <p>Count: {item.count}</p>
                 
+                <button className='btn-delete-item'>
+                  <AiOutlineDelete className='icon-delete'/>
+                </button>
               </div>
               ))
           }
