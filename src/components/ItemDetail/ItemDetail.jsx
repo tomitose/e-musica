@@ -38,8 +38,10 @@ const ItemDetail = ({ item }) => {
 
       {
       isInCart(item.id) 
-      ? 
-        <Link to="/cart" className="btn-go-to-cart">Go to Cart</Link>
+      ? <div className="btns-go-add">
+          <Link to="/cart" className="btn-go-to-cart">Go to Cart</Link>
+          <Link to="/" onClick={goBack} className="btn-back">Add More + </Link>
+        </div>
       : 
         <ItemCount
           stock={item.stock}
@@ -48,10 +50,6 @@ const ItemDetail = ({ item }) => {
           counter={count}
         />
       }
-
-      <button onClick={goBack} className="btn-back">
-        Back Home
-      </button>
     </div>
   );
 };

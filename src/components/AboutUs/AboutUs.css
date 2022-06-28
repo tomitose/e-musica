@@ -1,0 +1,10 @@
+.container-aboutus{
+    background-color: #ffffff;
+    min-height: 100vh;
+    color: #6a969c;
+}
+
+.container-img{
+    display: flex;
+    justify-content: center;
+}

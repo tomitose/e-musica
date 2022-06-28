@@ -12,11 +12,14 @@ const Cart = () => {
   
   return (
 
+    
+
     <div className='container-cart-first'>
           <h2 className='text-title'>Order</h2>
           <hr />
       <div className='container-cart-ext'>
           {
+            
               cart.map((item) => (
               <div key={item.id} className="container-cart-item"> 
 
