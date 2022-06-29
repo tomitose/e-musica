@@ -20,37 +20,37 @@ const Cart = ({item}) => {
       <div className='container-cart-ext'>
           
           {
-              isInCart.lenght > 1
+              cart.lenght === 0
               ?
               (
-                cart.map((item) => (
-                <div key={item.id} className="container-cart-item"> 
-  
-                  <h4>{item.name}</h4>
-                  <img className='img-cart' src={item.img} alt={item.name} />
-                  <h5>Product Price: ${item.price * item.count}</h5>
-                  <p>Count: {item.count}</p>
-                  
-                  <button onClick={() => deleteItem(item.id)} className='btn-delete-item'>
-                    <AiOutlineDelete className='icon-delete'/>
-                  </button>
-  
-                  <div className='container-total-button'>
-                        <h2 className='text-cart-total'>Total: ${totalPrice()}</h2>
-                        <button onClick={emptyCart} className='btn-empty-cart'>Empty Cart <AiFillDelete/></button>
-                        <button className='btn-make-order'>Make Order <BsCartCheckFill/> </button>
-                  </div>
-                </div>
-                
-                ))
-              )            
-
+                <>
+                  <h3>The Cart has no products !</h3>
+                  <button>Go buy</button>
+                </>
+              )
               :
               (
-                <div>
-                  <h3>The Cart has no products !</h3>
-                </div>
-              )
+                cart.map((item) => (
+                  <div key={item.id} className="container-cart-item"> 
+    
+                    <h4>{item.name}</h4>
+                    <img className='img-cart' src={item.img} alt={item.name} />
+                    <h5>Product Price: ${item.price * item.count}</h5>
+                    <p>Count: {item.count}</p>
+                    
+                    <button onClick={() => deleteItem(item.id)} className='btn-delete-item'>
+                      <AiOutlineDelete className='icon-delete'/>
+                    </button>
+    
+                    <div className='container-total-button'>
+                          <h2 className='text-cart-total'>Total: ${totalPrice()}</h2>
+                          <button onClick={emptyCart} className='btn-empty-cart'>Empty Cart <AiFillDelete/></button>
+                          <button className='btn-make-order'>Make Order <BsCartCheckFill/> </button>
+                    </div>
+                  </div>
+                
+                ))
+              )                  
           }
       </div>
     </div>
