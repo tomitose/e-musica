@@ -10,23 +10,23 @@ const AboutUs = () => {
       <h1 className="title-about">About Guitar Master</h1>
       <div className="text-about">
         <h2>Mission Statement</h2>
-        <h5>
+        <h4>
           Guitar building is an ongoing process of discovery. We are devoted to
           the guitar's rich heritage while committed to new technologies that
           will enrich our products with uncompromised tone, playability and
           beauty.
-        </h5>
+        </h4>
         <br />
-        <h5>
+        <h4>
           Our success depends on our ability to listen, implement positive
           change and continually refine our craft.
-        </h5>
+        </h4>
         <br />
-        <h5>
+        <h4>
           Believing this, we strive to build the best guitars and guitar
           products possible and to serve our employees, customers, suppliers and
           community with distinction.
-        </h5>
+        </h4>
       </div>
     </div>
   );

@@ -13,13 +13,19 @@
 
 .title-about{
     text-align: center;
+    margin-bottom: 70px;
 }
 
 .text-about{
     padding: 10px;
+    text-align: center;
 }
 
-.text-about h5 {
+.text-about h2 {
+    margin-bottom: 40px;
+}
+
+.text-about h4 {
     margin: 0;
 }
 
