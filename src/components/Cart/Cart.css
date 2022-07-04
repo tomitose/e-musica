@@ -81,3 +81,22 @@
   font-size: initial;
   font-weight: 700;
 }
+
+.container-no-product{
+  text-align: center;
+}
+
+.btn-go-buy{
+    background-color: #e7c11e;
+    font-weight: 700;
+    cursor: pointer;
+    color: #fff;
+    text-decoration: none;
+    margin: 20px;
+    font-size: 20px;
+    border: black 1px solid;
+}
+
+.btn-link-order{
+  text-decoration: none;
+}

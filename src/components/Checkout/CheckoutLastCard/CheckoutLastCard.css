@@ -1,0 +1,10 @@
+.container-last-card{
+    background-color: #282c34;
+    min-height: 100vh;
+    color: white;
+}
+
+.title-last-card{
+    margin: 0;
+    text-align: center;
+}

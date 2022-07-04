@@ -1,10 +1,31 @@
 .container-aboutus{
-    background-color: #ffffff;
+    background-color: #282c34;
     min-height: 100vh;
-    color: #6a969c;
+    color: white;
 }
 
 .container-img{
     display: flex;
     justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
+
+.title-about{
+    text-align: center;
+}
+
+.text-about{
+    padding: 10px;
+}
+
+.text-about h5 {
+    margin: 0;
+}
+
+
+@media screen and (max-width: 500px) {
+    .img-about {
+      width: 330px;
+    }
+  }

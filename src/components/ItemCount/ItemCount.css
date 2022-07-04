@@ -1,4 +1,7 @@
-.container-count {
+.container-count{
+    margin-bottom: 20px;
+}
+.container-count-btns {
     display: flex;
     align-items: center;
     justify-content: center;
