@@ -7,4 +7,28 @@
 .title-last-card{
     margin: 0;
     text-align: center;
+    padding-top: 20px;
+}
+
+.container-last-card > h3 {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.container-last-card > div {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.btn-go-home-last{
+    background-color: #e7c11e;
+    font-weight: 700;
+    cursor: pointer;
+    color: #fff;
+    text-decoration: none;
+    padding: 0 5px 0 5px;
+    margin: 20px;
+    font-size: 20px;
+    border: #e7c11e 2px solid;
+    border-radius: 5px;
 }
