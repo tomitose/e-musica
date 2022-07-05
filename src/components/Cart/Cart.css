@@ -55,13 +55,13 @@
 .btn-empty-cart {
   text-align: end;
   background-color: #ff0000;
-  border-radius: 3px;
+  border-radius: 5px;
   cursor: pointer;
   margin-bottom: 10px;
   text-decoration: none;
   color: #fff;
   display: block;
-  border: black 1px solid;
+  border: rgb(41, 41, 41) 2px solid;
   padding: 7px;
   font-size: initial;
   font-weight: 700;
@@ -70,13 +70,13 @@
 .btn-make-order {
   text-align: end;
   background-color: #377a00;
-  border-radius: 3px;
+  border-radius: 5px;
   cursor: pointer;
   margin-bottom: 10px;
   text-decoration: none;
   color: #fff;
   display: block;
-  border: black 1px solid;
+  border: rgb(41, 41, 41) 2px solid;
   padding: 7px;
   font-size: initial;
   font-weight: 700;

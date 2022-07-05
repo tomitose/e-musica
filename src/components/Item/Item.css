@@ -33,4 +33,6 @@
     padding: 11px 0 10px 0;
     width: 100%;
     font-size: 20px;
+    border: #e7c11e 2px solid;
+    border-radius: 5px;
 }
