@@ -95,8 +95,9 @@
     text-decoration: none;
     margin: 20px;
     font-size: 20px;
-    border: black 1px solid;
-}
+    border: #e7c11e 2px solid;
+    border-radius: 5px;
+  }
 
 .btn-link-order{
   text-decoration: none;

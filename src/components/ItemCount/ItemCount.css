@@ -16,12 +16,15 @@
 
 .btn-inad{
     background-color: #6a969c;
-    color: white;
+    color: #e7c11e;
     padding: 6px;
+    border-radius: 5px;
+    border: #6a969c 2px solid;
+
+
 }
 
 .btn-add-cart {
-    display: flex;
     background-color: #e7c11e;
     font-weight: 700;
     cursor: pointer;
