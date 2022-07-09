@@ -1,11 +1,64 @@
 import React from "react";
+import { useState } from "react";
+import { useCartContext } from "../Context/CartContext";
+import {Navigate} from "react-router-dom"
 import "./Checkout.css";
+import { db } from "../../firebase/config";
+import { collection, addDoc } from "firebase/firestore";
+import CheckoutLastCard from "./CheckoutLastCard/CheckoutLastCard";
 
 const Checkout = () => {
+  
+  
+  const { cart,totalPrice,emptyCart } = useCartContext()
+
+  const [orderId,setOrderId] = useState(null)
+
+  const [values,setValues] = useState({
+    name:"",
+    lastname: "",
+    cel: "",
+    adress: "",
+    email: ""
+  })
+
+  const handleInputChange = (e) => {
+    setValues({
+      ...values,
+      [e.target.name]: e.target.value
+    })
+    
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+
+    const order = {
+      buyer: values,
+      items: cart.map(({id,name,count}) => ({id,name,count})),
+      total: totalPrice()
+    }
+
+    const ordersRef = collection(db,"orders")
+    addDoc(ordersRef,order)
+      .then((doc)=>{
+        setOrderId(doc.id)
+        emptyCart()
+      })
+  }
+
+  if (orderId) {
+    return <CheckoutLastCard orderId={orderId} />
+  }
+
+  if (cart.length === 0) {
+    return <Navigate to="/"/>
+  }
+
   return (
     <div className="container-checkout">
       <h1 className="title-checkout">Login</h1>
-      <form action="" className="form">
+      <form onSubmit={handleSubmit} action="" className="form">
         <div>
           <label htmlFor="name">Name: </label>
           <input
@@ -13,8 +66,8 @@ const Checkout = () => {
             name="name"
             placeholder="Name"
             id="name"
-            // value={inputName}
-            // onChange={handleInputName}
+            value={values.name}
+            onChange={handleInputChange}
           />
         </div>
 
@@ -25,8 +78,8 @@ const Checkout = () => {
             name="lastname"
             placeholder="Lastname"
             id="lastname"
-            // value={inputLastname}
-            // onChange={handleInputLastname}
+            value={values.lastname}
+            onChange={handleInputChange}
           />
         </div>
 
@@ -37,8 +90,8 @@ const Checkout = () => {
             name="cel"
             placeholder="Cel"
             id="cel"
-            // value={inputCel}
-            // onChange={handleInputCel}
+            value={values.cel}
+            onChange={handleInputChange}
           />
         </div>
 
@@ -49,8 +102,8 @@ const Checkout = () => {
             name="adress"
             placeholder="Adress"
             id="adress"
-            // value={inputAdress}
-            // onChange={handleInputAdress}
+            value={values.adress}
+            onChange={handleInputChange}
           />
         </div>
 
@@ -61,8 +114,8 @@ const Checkout = () => {
             name="email"
             placeholder="Email"
             id="email"
-            // value={inputEmail}
-            // onChange={handleInputEmail}
+            value={values.email}
+            onChange={handleInputChange}
           />
         </div>
 

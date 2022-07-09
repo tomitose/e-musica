@@ -45,7 +45,7 @@ const Cart = () => {
         <div className='container-total-button'>
           <h2 className='text-cart-total'>Total: ${totalPrice()}</h2>
           <button onClick={emptyCart} className='btn-empty-cart'>Empty Cart <AiFillDelete/></button>
-          <Link className='btn-link-order' to={'./checkout'}>
+          <Link className='btn-link-order' to={'/checkout'}>
             <button className='btn-make-order'>Make Order <BsCartCheckFill/> </button>
           </Link>
         </div>    
