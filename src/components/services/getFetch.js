@@ -129,7 +129,8 @@ const products = [
         img: "/img/Guitars-gibson/Gibson_bbkingEbony.png",
         name:"Gibson BB King Ebony",
         price: 6999,
-        stock: 30
+        stock: 30,
+        desc: "The legendary Gibson B.B. King Lucille Legacy returns to the Custom Shop ES™ lineup as a core Artist model. Lucille features all of the high-end appointments that are fit for a King. Highlights include gold hardware, including a gold “B.B. King” engraved truss rod cover and a TP-6 tailpiece with fine tuners. A “Lucille” mother of pearl inlay adorns the headstock, and the ebony fretboard features split block mother of pearl inlays. A mono Varitone switch, along with four audio taper CTS® potentiometers and paper-in-oil Bumblebee capacitors, are paired to Gibson Custombucker humbucking pickups. The legendary semi-hollowbody design remains, but the f-holes are gone, in keeping with B.B. King’s personal preferences. The top, back, and sides of the body feature stunning figured maple veneer, which is visible through the Transparent Ebony nitrocellulose lacquer finish, making Lucille a very special guitar that’s fit for blues royalty."
     },
     // {
     //     id: 14,
@@ -143,9 +144,10 @@ const products = [
         id: 15,
         category: "gibson",
         img: "/img/Guitars-gibson/Gibson_explorer.png",
-        name:"Gibson Explorer ",
+        name:"Gibson Explorer",
         price: 1999,
-        stock: 30
+        stock: 30,
+        desc: "Introduced along-side the Gibson Flying V in 1958, the Gibson Explorer traveled where no man had gone before and past every guitar design that came before it. Over 60 years later the Gibson Explorer is utilized by artists of all genres making it one of the true classics of the guitar world. The Antique Natural finish, all mahogany set-neck construction, rosewood fingerboard and slim taper neck provide incredible classic looks, sound and playability. A special set of calibrated Burstbucker 2 (neck) and Burstbucker 3 (bridge) pickups provide that perfect mix of volume, tone and power."
     },
     // {
     //     id: 16,
@@ -161,7 +163,8 @@ const products = [
         img: "/img/Guitars-gibson/Gibson_flyingv_korina.png",
         name:"Gibson Flying V Korina",
         price: 9999,
-        stock: 10
+        stock: 10,
+        desc:"The Gibson Flying V™ was way ahead of its time when it was introduced in 1958, and only 81 were shipped that year, but it has become very popular in the years since then. The classic vintage Flying V features have been carefully recreated in this Historic Reissue model. Featuring an ABR-1 bridge with a string-through korina body, Custombucker pickups, korina neck, Indian rosewood fretboard, two volume and one tone control with CTS® pots and a phone book capacitor, gold hardware, Kluson® tuners, and a 4-ply black pickguard. A historically accurate case is included, with a classic brown exterior and plush pink interior."
     },
     // {
     //     id: 18,
@@ -177,7 +180,8 @@ const products = [
         img: "/img/Guitars-gibson/Gibson_lespaul70Delux.png",
         name:"Gibson Les Paul 70 Delux",
         price: 2999,
-        stock: 50
+        stock: 50,
+        desc: "First released in 1969, the Deluxe saw the introduction of the mini humbucker™ to the Les Paul lineup. Mini humbuckers retain the hum-free performance of their full-sized cousins but with a somewhat clearer and brighter tonality. The new Deluxe has features that were inspired by those early models from the 1970s, with a non-weight relief mahogany body and bound maple top, a bound mahogany neck with a Rounded C profile, vintage-style Keystone tuners, Graph Tech® nut, and a traditional Les Paul control layout with 2 Volume and 2 Tone controls wired with Orange Drop® capacitors. Available in classic Goldtop and 70s Cherry Sunburst gloss nitrocellulose lacquer finishes."
     },
     // {
     //     id: 20,
@@ -193,7 +197,8 @@ const products = [
         img: "/img/Guitars-gibson/Gibson_lespaulGold.png",
         name:"Gibson Les Paul 50 Gold Top",
         price: 2999,
-        stock: 30
+        stock: 30,
+        desc:"The new Les Paul Standard returns to the classic design that made it relevant, played and loved -- shaping sound across generations and genres of music. It pays tribute to Gibson's Golden Era of innovation and brings authenticity back to life. The Les Paul Standard 50's has a solid mahogany body with a maple top, a rounded 50's-style mahogany neck with a rosewood fingerboard and trapezoid inlays. It's equipped with an ABR-1, the classic-style Tune-O-Matic bridge, aluminum stop bar tailpiece, vintage deluxe tuners with keystone buttons, and aged gold tophat knobs. The calibrated Burstbucker 1 (neck) and Burstbucker 2 (bridge) pickups are loaded with AlNiCo II magnets, audio taper potentiometers and orange drop capacitors."
     },
     // {
     //     id: 22,
