@@ -4,7 +4,7 @@ import { useCartContext } from "../Context/CartContext";
 import {Navigate} from "react-router-dom"
 import "./Checkout.css";
 import { db } from "../../firebase/config";
-import { collection, addDoc } from "firebase/firestore";
+import { collection, getDocs, addDoc, writeBatch,query,where, documentId } from "firebase/firestore";
 import CheckoutLastCard from "./CheckoutLastCard/CheckoutLastCard";
 
 const Checkout = () => {
@@ -22,7 +22,7 @@ const Checkout = () => {
     email: ""
   })
 
-  const handleInputChange = (e) => {
+  const handleInputChange  = async (e) => {
     setValues({
       ...values,
       [e.target.name]: e.target.value
@@ -30,7 +30,7 @@ const Checkout = () => {
     
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
 
     const order = {
@@ -39,12 +39,42 @@ const Checkout = () => {
       total: totalPrice()
     }
 
+    const batch = writeBatch(db)
     const ordersRef = collection(db,"orders")
-    addDoc(ordersRef,order)
-      .then((doc)=>{
-        setOrderId(doc.id)
-        emptyCart()
-      })
+    const productsRef = collection(db,"products")
+    const q = query(productsRef, where(documentId(),'in',cart.map(item => item.id)))
+    
+    const outOfStock = []
+
+    const products = await getDocs(q)
+
+    products.docs.forEach((doc) => {
+      const itemToUpdate = cart.find(prod => prod.id === doc.id)
+
+      if ((doc.data().stock - itemToUpdate.count) >= 0) {
+        batch.update(doc.ref, {
+         stock: doc.data().stock - itemToUpdate.count         
+        })
+      } else {
+        outOfStock.push(itemToUpdate)
+      }
+
+    })
+
+    if (outOfStock.length === 0) {
+      addDoc(ordersRef,order)
+        .then((doc)=>{
+          batch.commit()
+          setOrderId(doc.id)
+          emptyCart()
+        })
+    }
+    else{
+      alert("There are Items without Stock")
+      emptyCart()
+
+    }
+
   }
 
   if (orderId) {
@@ -54,6 +84,7 @@ const Checkout = () => {
   if (cart.length === 0) {
     return <Navigate to="/"/>
   }
+
 
   return (
     <div className="container-checkout">
@@ -126,3 +157,17 @@ const Checkout = () => {
 };
 
 export default Checkout;
+
+
+    // cart.forEach((item) =>{
+    //   const docRef = doc(db,"products",item.id)
+    //   getDoc(docRef)
+    //     .then((doc)=>{
+    //       if((doc.data().stock - item.count) >= 0){
+    //           updateDoc(docRef,{
+    //           stock: doc.data().stock - item.count
+    //         })
+    //       }
+    //       else {alert("There`s no stock of the product:" + item.name)}
+    //     })
+    // })

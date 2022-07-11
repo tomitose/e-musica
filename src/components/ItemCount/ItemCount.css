@@ -36,5 +36,17 @@
     font-size: 20px;
     border: #e7c11e 2px solid;
     border-radius: 5px;
+    margin-left: 20px;
 }
 
+.no-stock-btn{
+    background-color: #e7c11e;
+    font-weight: 700;
+    cursor: pointer;
+    color: #fff;
+    text-decoration: none;
+    width: 100%;
+    font-size: 20px;
+    border: #e7c11e 2px solid;
+    border-radius: 5px;
+}
