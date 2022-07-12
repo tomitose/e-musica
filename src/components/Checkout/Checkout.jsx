@@ -6,32 +6,35 @@ import "./Checkout.css";
 import { db } from "../../firebase/config";
 import { collection, getDocs, addDoc, writeBatch,query,where, documentId } from "firebase/firestore";
 import CheckoutLastCard from "./CheckoutLastCard/CheckoutLastCard";
+import { Formik } from "formik";
+import * as Yup from 'yup';
+
 
 const Checkout = () => {
   
+  const SignupSchema = Yup.object().shape({
+    name: Yup.string()
+      .min(2, 'Too Short!')
+      .max(25, 'Too Long!')
+      .required('Required'),  
+    lastname: Yup.string()
+      .min(2, 'Too Short!')
+      .max(25, 'Too Long!')
+      .required('Required'),
+    cel: Yup.number()
+      .required('Required'),
+    adress: Yup.string()
+      .min(2, 'Too Short!')
+      .max(20, 'Too Long!')
+      .required('Required'),
+    email: Yup.string().email('Invalid email').required('Required'),
+  });
   
   const { cart,totalPrice,emptyCart } = useCartContext()
 
   const [orderId,setOrderId] = useState(null)
 
-  const [values,setValues] = useState({
-    name:"",
-    lastname: "",
-    cel: "",
-    adress: "",
-    email: ""
-  })
-
-  const handleInputChange  = async (e) => {
-    setValues({
-      ...values,
-      [e.target.name]: e.target.value
-    })
-    
-  }
-
-  const handleSubmit = async (e) => {
-    e.preventDefault()
+  const generateOrder = async (values) => {
 
     const order = {
       buyer: values,
@@ -85,73 +88,86 @@ const Checkout = () => {
     return <Navigate to="/"/>
   }
 
-
   return (
     <div className="container-checkout">
-      <h1 className="title-checkout">Login</h1>
-      <form onSubmit={handleSubmit} action="" className="form">
-        <div>
-          <label htmlFor="name">Name: </label>
-          <input
-            type="text"
-            name="name"
-            placeholder="Name"
-            id="name"
-            value={values.name}
-            onChange={handleInputChange}
-          />
-        </div>
-
-        <div>
-          <label htmlFor="lastname">Lastname: </label>
-          <input
-            type="text"
-            name="lastname"
-            placeholder="Lastname"
-            id="lastname"
-            value={values.lastname}
-            onChange={handleInputChange}
-          />
-        </div>
-
-        <div>
-          <label htmlFor="cel">Cel: </label>
-          <input
-            type="number"
-            name="cel"
-            placeholder="Cel"
-            id="cel"
-            value={values.cel}
-            onChange={handleInputChange}
-          />
-        </div>
-
-        <div>
-          <label htmlFor="adress">Adress: </label>
-          <input
-            type="text"
-            name="adress"
-            placeholder="Adress"
-            id="adress"
-            value={values.adress}
-            onChange={handleInputChange}
-          />
-        </div>
-
-        <div>
-          <label htmlFor="email">E-mail: </label>
-          <input
-            type="text"
-            name="email"
-            placeholder="Email"
-            id="email"
-            value={values.email}
-            onChange={handleInputChange}
-          />
-        </div>
-
-        <button type="submit">Buy</button>
-      </form>
+      <h1 className="title-checkout">Checkout</h1>
+      <Formik
+        initialValues={{
+            name:"",
+            lastname: "",
+            cel: "",
+            adress: "",
+            email: ""
+        }}
+        onSubmit={generateOrder}
+        validationSchema={SignupSchema}
+      >
+        {(formik) => (
+                 <form onSubmit={formik.handleSubmit} className="form">
+                 <div>
+                   <label htmlFor="name">Name: </label>
+                   <input
+                     type="text"
+                     name="name"
+                     placeholder="Name"
+                     id="name"
+                     value={formik.values.name}
+                     onChange={formik.handleChange}
+                   />
+                 </div>
+                  {formik.errors.name && <p className="required-text">*{formik.errors.name}</p>}
+                 <div>
+                   <label htmlFor="lastname">Lastname: </label>
+                   <input
+                     type="text"
+                     name="lastname"
+                     placeholder="Lastname"
+                     id="lastname"
+                     value={formik.values.lastname}
+                     onChange={formik.handleChange}
+                   />
+                 </div>
+                  {formik.errors.lastname && <p className="required-text">{formik.errors.lastname}</p>}
+                 <div>
+                   <label htmlFor="cel">Cel: </label>
+                   <input
+                     type="number"
+                     name="cel"
+                     placeholder="Cel"
+                     id="cel"
+                     value={formik.values.cel}
+                     onChange={formik.handleChange}
+                   />
+                 </div>
+                  {formik.errors.cel && <p className="required-text">{formik.errors.cel}</p>}
+                 <div>
+                   <label htmlFor="adress">Adress: </label>
+                   <input
+                     type="text"
+                     name="adress"
+                     placeholder="Adress"
+                     id="adress"
+                     value={formik.values.adress}
+                     onChange={formik.handleChange}
+                   />
+                 </div>
+                  {formik.errors.adress && <p className="required-text">{formik.errors.adress}</p>}
+                 <div>
+                   <label htmlFor="email">E-mail: </label>
+                   <input
+                     type="text"
+                     name="email"
+                     placeholder="Email"
+                     id="email"
+                     value={formik.values.email}
+                     onChange={formik.handleChange}
+                   />
+                 </div>
+                  {formik.errors.email && <p className="required-text">{formik.errors.email}</p>}
+                 <button type="submit">Buy</button>
+               </form>
+        )}
+      </Formik>
     </div>
   );
 };
@@ -171,3 +187,19 @@ export default Checkout;
     //       else {alert("There`s no stock of the product:" + item.name)}
     //     })
     // })
+
+    // const [values,setValues] = useState({
+    //   name:"",
+    //   lastname: "",
+    //   cel: "",
+    //   adress: "",
+    //   email: ""
+    // })
+  
+    // const handleInputChange  = async (e) => {
+    //   setValues({
+    //     ...values,
+    //     [e.target.name]: e.target.value
+    //   })
+      
+    // }
