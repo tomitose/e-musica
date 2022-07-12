@@ -31,6 +31,8 @@ function App() {
               <Route path="/merchandise" element= { <Merchandise/> }></Route>
               <Route path="/checkout" element={<Checkout/>}></Route>
               <Route path="/checkoutlastcard" element={<CheckoutLastCard/>}></Route>
+              <Route path="*" element={<ItemListContainer />}></Route>
+
             </Routes>
 
             <Footer/>  

@@ -91,6 +91,7 @@ const Checkout = () => {
   return (
     <div className="container-checkout">
       <h1 className="title-checkout">Checkout</h1>
+      <hr style={{width: "100%"}}/>
       <Formik
         initialValues={{
             name:"",
