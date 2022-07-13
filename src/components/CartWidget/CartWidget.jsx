@@ -19,7 +19,7 @@ const CartWidget = () => {
             <div className="cart-cond">
               <AiOutlineShoppingCart className='cart-logo'></AiOutlineShoppingCart>
               <p className='cart-length'>
-              {cart.length}
+              {cart.map(item => item.count).reduce((prev, curr) => prev + curr, 0)}
               </p>
             </div>
           }

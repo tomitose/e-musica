@@ -10,7 +10,7 @@ const CheckoutLastCard = ({orderId}) => {
     
     return (
       <div className='container-last-card'>
-          <h1 className='title-last-card'>Checkout</h1>
+          <h1 className='title-last-card'>Order Checkout</h1>
           <h3>Your order  has been done succesfully !</h3>
           <h3> Your order number is: <b className='order-number'>{orderId}</b></h3>
           <div>
