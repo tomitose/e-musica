@@ -1,3 +1,14 @@
+This project is an ecommerce made with the React language, for the Coderhouse course.
+
+In this project one can add or remove products from their cart in their own way. Once you have decided on the final product(s), you will fill out a form with your data, and finally the purchase order will be created with a token at the end to validate the order.
+
+
+Some of the libraries i`ve used:
+-yup
+-formik
+-mui/material
+-react-bootstrap
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

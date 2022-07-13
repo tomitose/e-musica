@@ -10,30 +10,30 @@ const ItemListContainer = () => {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const {categoryId} = useParams();
-
+  const { categoryId } = useParams();
 
   useEffect(() => {
     setLoading(true);
 
-    const productsRef = collection(db, "products")
-    const q = categoryId ? query(productsRef, where("category","==", categoryId)) : productsRef
+    const productsRef = collection(db, "products");
+    const q = categoryId
+      ? query(productsRef, where("category", "==", categoryId))
+      : productsRef;
 
     getDocs(q)
       .then((resp) => {
         const newItems = resp.docs.map((doc) => {
-          return{
-            id:doc.id,
-            ...doc.data ()
-          }
-        })
-        setItems(newItems)
-      })     
-      .finally (() => {
-        setLoading(false)
+          return {
+            id: doc.id,
+            ...doc.data(),
+          };
+        });
+        setItems(newItems);
       })
-
-  },[categoryId]);
+      .finally(() => {
+        setLoading(false);
+      });
+  }, [categoryId]);
 
   return (
     <div className="container-item-list-co">
@@ -42,7 +42,7 @@ const ItemListContainer = () => {
           <div>Loading...</div>
         </Spinner>
       ) : (
-        <ItemList items= {items} />
+        <ItemList items={items} />
       )}
     </div>
   );

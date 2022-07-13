@@ -6,9 +6,7 @@ import ItemCount from "../ItemCount/ItemCount";
 import "./ItemDetail.css";
 
 const ItemDetail = ({ item }) => {
-  const { addItem,isInCart } = useCartContext();
-  console.log(isInCart(item.id))
-
+  const { addItem, isInCart } = useCartContext();
 
   const [count, setCount] = useState(1);
 
@@ -21,12 +19,10 @@ const ItemDetail = ({ item }) => {
   const addToCart = () => {
     const itemToCart = {
       ...item,
-     count
+      count,
     };
 
-    addItem(itemToCart)
-    console.log(itemToCart)
-
+    addItem(itemToCart);
   };
 
   return (
@@ -36,20 +32,23 @@ const ItemDetail = ({ item }) => {
       <p className="text-desc">{item.desc}</p>
       <h3 className="price-detail">Price: ${item.price}</h3>
 
-      {
-      isInCart(item.id) 
-      ? <div className="btns-go-add">
-          <Link to="/cart" className="btn-go-to-cart">Go to Cart</Link>
-          <Link to="/" onClick={goBack} className="btn-back">Add More + </Link>
+      {isInCart(item.id) ? (
+        <div className="btns-go-add">
+          <Link to="/cart" className="btn-go-to-cart">
+            Go to Cart
+          </Link>
+          <Link to="/" onClick={goBack} className="btn-back">
+            Add More +{" "}
+          </Link>
         </div>
-      : 
+      ) : (
         <ItemCount
           stock={item.stock}
           addToCart={addToCart}
           setCounter={setCount}
           counter={count}
         />
-      }
+      )}
     </div>
   );
 };

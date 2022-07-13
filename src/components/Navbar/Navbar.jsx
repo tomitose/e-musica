@@ -48,7 +48,7 @@ const Navbar = () => {
             onClick={handleClick}
             className="btn-models"
           >
-            Models 
+            Models
           </Button>
         </ul>
 

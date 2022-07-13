@@ -1,9 +1,9 @@
-import products from "./getFetch"
+import products from "./getFetch";
 
 export const getData = () => {
-    return new Promise ((resolve, reject) => {
-        setTimeout (() => {
-            resolve(products)
-        }, 2000)
-    })
-  }
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(products);
+    }, 2000);
+  });
+};

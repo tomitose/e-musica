@@ -25,7 +25,7 @@ const ItemCount = ({ stock, addToCart, setCounter, counter }) => {
           <div>
             <h3 className="count-number"> There`s no stock</h3>
             <Link to="/">
-            <Button className="no-stock-btn"> Go back </Button>
+              <Button className="no-stock-btn"> Go back </Button>
             </Link>
           </div>
         ) : (
